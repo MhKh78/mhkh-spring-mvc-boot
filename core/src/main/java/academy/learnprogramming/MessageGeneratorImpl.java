@@ -1,5 +1,6 @@
 package academy.learnprogramming;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +10,10 @@ import javax.annotation.PostConstruct;
 
 // is for * automatic * bean finding
 @Component
+@Slf4j
 public class MessageGeneratorImpl implements MessageGenerator {
     // == constants ==
-    private static final Logger log = LoggerFactory.getLogger(MessageGeneratorImpl.class);
+//    private static final Logger log = LoggerFactory.getLogger(MessageGeneratorImpl.class);
     // == fields ==
     private final Game game;
 
@@ -40,7 +42,7 @@ public class MessageGeneratorImpl implements MessageGenerator {
             return "You Lost. The number was " + game.getNumber();
         } else if (!game.isValidNumberRange()) {
             return "Invalid Number range!";
-        } else if (game.getRemainGuesses() == game.getGuessCount()) {
+        } else if (game.getRemainingGuesses() == game.getGuessCount()) {
             return "What is your first guess";
         } else {
             String direction = "Lower";
@@ -49,7 +51,7 @@ public class MessageGeneratorImpl implements MessageGenerator {
                 direction = "Higher";
             }
 
-            return direction + "! You have " + game.getRemainGuesses() + " guesses left";
+            return direction + "! You have " + game.getRemainingGuesses() + " guesses left";
         }
     }
 }

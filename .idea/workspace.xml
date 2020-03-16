@@ -2,22 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6378157-f650-484b-8b8e-1869a8964e0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console/console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/console/console.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/console/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console/src/main/java/academy/learnprogramming/console/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/console/src/main/java/academy/learnprogramming/console/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console/target/classes/academy/learnprogramming/console/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/console/target/classes/academy/learnprogramming/console/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console/target/console-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/console/target/console-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/console/target/console-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/console/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/console/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/console/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/core/core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/META-INF/core.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/console/src/main/java/academy/learnprogramming/console/ConsoleNumberGuess.java" beforeDir="false" afterPath="$PROJECT_DIR$/console/src/main/java/academy/learnprogramming/console/ConsoleNumberGuess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/academy/learnprogramming/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/academy/learnprogramming/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/academy/learnprogramming/GameImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/academy/learnprogramming/GameImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/academy/learnprogramming/MessageGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/academy/learnprogramming/MessageGeneratorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/academy/learnprogramming/NumberGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/academy/learnprogramming/NumberGeneratorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/academy/learnprogramming/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/academy/learnprogramming/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/academy/learnprogramming/GameImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/academy/learnprogramming/GameImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/academy/learnprogramming/MessageGeneratorImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/academy/learnprogramming/MessageGeneratorImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +85,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.console-1.0-SNAPSHOT-jar-with-dependencies.jar">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="academy.learnprogramming.console.Main" />
       <module name="console" />
@@ -124,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.console-1.0-SNAPSHOT-jar-with-dependencies.jar" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JAR Application.console-1.0-SNAPSHOT-jar-with-dependencies.jar" />
         <item itemvalue="JAR Application.console-1.0-SNAPSHOT.jar" />
         <item itemvalue="JAR Application.core-1.0-SNAPSHOT.jar" />
         <item itemvalue="JAR Application.core-1.0-SNAPSHOT-jar-with-dependencies.jar" />
@@ -156,7 +149,8 @@
       <workItem from="1584350984703" duration="145000" />
       <workItem from="1584351141704" duration="1271000" />
       <workItem from="1584357504050" duration="9733000" />
-      <workItem from="1584368095287" duration="687000" />
+      <workItem from="1584368095287" duration="1417000" />
+      <workItem from="1584379948680" duration="589000" />
     </task>
     <servers />
   </component>
@@ -192,22 +186,22 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="244" y="281" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1584312119309" />
-    <state width="883" height="269" key="GridCell.Tab.0.bottom" timestamp="1584368736345">
+    <state width="883" height="269" key="GridCell.Tab.0.bottom" timestamp="1584380060832">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="883" height="269" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1584368736345" />
-    <state width="883" height="269" key="GridCell.Tab.0.center" timestamp="1584368736345">
+    <state width="883" height="269" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1584380060832" />
+    <state width="883" height="269" key="GridCell.Tab.0.center" timestamp="1584380060832">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="883" height="269" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1584368736345" />
-    <state width="883" height="269" key="GridCell.Tab.0.left" timestamp="1584368736345">
+    <state width="883" height="269" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1584380060832" />
+    <state width="883" height="269" key="GridCell.Tab.0.left" timestamp="1584380060832">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="883" height="269" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1584368736345" />
-    <state width="883" height="269" key="GridCell.Tab.0.right" timestamp="1584368736345">
+    <state width="883" height="269" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1584380060832" />
+    <state width="883" height="269" key="GridCell.Tab.0.right" timestamp="1584380060832">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="883" height="269" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1584368736345" />
+    <state width="883" height="269" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1584380060832" />
     <state x="69" y="50" width="998" height="708" key="SettingsEditor" timestamp="1584368151097">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>

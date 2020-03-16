@@ -11,7 +11,7 @@ public interface Game {
 
     int getSmallest();
 
-    int getRemainGuesses();
+    int getRemainingGuesses();
 
     int getGuessCount();
 
