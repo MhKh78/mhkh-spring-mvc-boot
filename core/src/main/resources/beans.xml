@@ -1,0 +1,30 @@
+<!---->
+<!--it was the first way now its gone-->
+<!---->
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:context="http://www.springframework.org/schema/context"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+<!--           http://www.springframework.org/schema/beans/spring-beans.xsd-->
+<!--           http://www.springframework.org/schema/context-->
+<!--           http://www.springframework.org/schema/context/spring-context.xsd" >-->
+<!--&lt;!&ndash;    deleted schema/tools from xsi and xmlns&ndash;&gt;-->
+<!--&lt;!&ndash;one other way creating default naming convention (inside <beans> as an attribute) &ndash;&gt;-->
+<!--        &lt;!&ndash;default-init-method="reset"&ndash;&gt;-->
+<!--&lt;!&ndash;    component scanning so beans will be found automatically &ndash;&gt;-->
+<!--    <context:component-scan base-package="academy.learnprogramming"/>-->
+<!--&lt;!&ndash;    <bean id="numberGenerator" class="academy.learnprogramming.NumberGeneratorImpl"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    <bean id="game" class="academy.learnprogramming.GameImpl">&ndash;&gt;-->
+<!--&lt;!&ndash;          here is another way inside bean tag as an attribute &ndash;&gt;-->
+<!--&lt;!&ndash;          init-method="reset"&ndash;&gt;-->
+
+<!--    &lt;!&ndash; first way &ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg ref="numberGenerator"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        moved to auto wiring &ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="numberGenerator" ref="numberGenerator"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </bean>&ndash;&gt;-->
+<!--&lt;!&ndash;auto wiring instead&ndash;&gt;-->
+<!--&lt;!&ndash;    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>&ndash;&gt;-->
+<!--</beans>-->
+
