@@ -13,6 +13,8 @@ public interface Game {
 
     int getRemainGuesses();
 
+    int getGuessCount();
+
     void reset();
 
     void check();

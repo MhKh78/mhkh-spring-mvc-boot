@@ -13,19 +13,23 @@ import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
-@Component
 // first way to create eventListener
 //public class ConsoleNumberGuess implements ApplicationListener<ContextRefreshedEvent> {
+@Component
 public class ConsoleNumberGuess {
     // == constants ==
     private static final Logger log = LoggerFactory.getLogger(ConsoleNumberGuess.class);
 
     // == fields ==
-    @Autowired
-    private Game game;
+    private final Game game;
+    private final MessageGenerator messageGenerator;
 
-    @Autowired
-    private MessageGenerator messageGenerator;
+    // == constructor ==
+    public ConsoleNumberGuess(Game game, MessageGenerator messageGenerator) {
+        this.game = game;
+        this.messageGenerator = messageGenerator;
+    }
+
 
     // == events ==
 
@@ -71,4 +75,5 @@ public class ConsoleNumberGuess {
         }
     }
 }
+
 

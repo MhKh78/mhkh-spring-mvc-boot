@@ -3,6 +3,7 @@ package academy.learnprogramming;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 // for automatic bean finding
 //import org.springframework.stereotype.Component;
 
@@ -10,7 +11,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 // for automatic bean finding
-//@Component
+@Component
 public class GameImpl implements Game {
 
     // == constants ==
@@ -18,21 +19,22 @@ public class GameImpl implements Game {
 
     // == fields ==
     // Annotation way
-    @Autowired
-    private NumberGenerator numberGenerator;
-    private int guessCount = 0;
+    private final NumberGenerator numberGenerator;
+    private final int guessCount;
     private int number;
     private int guess;
     private int smallest;
     private int biggest;
-    private int remainingGuesses = 10;
+    private int remainingGuesses;
     private boolean validNumberRange = true;
 
     // == constructors ==
-    // first way
-//    public GameImpl(NumberGenerator numberGenerator) {
-//        this.numberGenerator = numberGenerator;
-//    }
+
+
+    public GameImpl(NumberGenerator numberGenerator, @GuessCount int guessCount) {
+        this.numberGenerator = numberGenerator;
+        this.guessCount = guessCount;
+    }
 
     // == init ==
     // error in java 9 or plus
@@ -40,10 +42,10 @@ public class GameImpl implements Game {
     @PostConstruct
     @Override
     public void reset() {
-        smallest = 0;
-        guess = 0;
-        guessCount = 0;
-        remainingGuesses = 10;
+        smallest = numberGenerator.getMinNumber();
+        // why?
+        guess = numberGenerator.getMinNumber();
+        remainingGuesses = guessCount;
         biggest = numberGenerator.getMaxNumber();
         number = numberGenerator.next();
         log.debug("the number is {}", number);
@@ -86,6 +88,10 @@ public class GameImpl implements Game {
         return biggest;
     }
 
+    @Override
+    public int getGuessCount() {
+        return guessCount;
+    }
 
     @Override
     public int getRemainGuesses() {
@@ -107,7 +113,6 @@ public class GameImpl implements Game {
         }
 
         remainingGuesses--;
-        guessCount++;
     }
 
     @Override

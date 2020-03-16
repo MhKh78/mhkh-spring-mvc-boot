@@ -3,18 +3,22 @@ package academy.learnprogramming;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
-// @Component is for * automatic * bean finding
+// is for * automatic * bean finding
+@Component
 public class MessageGeneratorImpl implements MessageGenerator {
     // == constants ==
     private static final Logger log = LoggerFactory.getLogger(MessageGeneratorImpl.class);
     // == fields ==
-    @Autowired
-    private Game game;
+    private final Game game;
 
-    private int guessCount = 10;
+    // == constructor ==
+    public MessageGeneratorImpl(Game game) {
+        this.game = game;
+    }
 
     // == init ==
     @PostConstruct
@@ -36,7 +40,7 @@ public class MessageGeneratorImpl implements MessageGenerator {
             return "You Lost. The number was " + game.getNumber();
         } else if (!game.isValidNumberRange()) {
             return "Invalid Number range!";
-        } else if (game.getRemainGuesses() == guessCount) {
+        } else if (game.getRemainGuesses() == game.getGuessCount()) {
             return "What is your first guess";
         } else {
             String direction = "Lower";
@@ -45,7 +49,7 @@ public class MessageGeneratorImpl implements MessageGenerator {
                 direction = "Higher";
             }
 
-            return direction + "! You have " + game.getRemainGuesses() + " guess left";
+            return direction + "! You have " + game.getRemainGuesses() + " guesses left";
         }
     }
 }
