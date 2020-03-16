@@ -3,7 +3,8 @@ package academy.learnprogramming;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+// for automatic bean finding
+//import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -19,7 +20,7 @@ public class GameImpl implements Game {
     // Annotation way
     @Autowired
     private NumberGenerator numberGenerator;
-    private int guessCount = 10;
+    private int guessCount = 0;
     private int number;
     private int guess;
     private int smallest;
@@ -41,6 +42,8 @@ public class GameImpl implements Game {
     public void reset() {
         smallest = 0;
         guess = 0;
+        guessCount = 0;
+        remainingGuesses = 10;
         biggest = numberGenerator.getMaxNumber();
         number = numberGenerator.next();
         log.debug("the number is {}", number);
@@ -104,6 +107,7 @@ public class GameImpl implements Game {
         }
 
         remainingGuesses--;
+        guessCount++;
     }
 
     @Override
