@@ -1,17 +1,15 @@
 package academy.learnprogramming.console;
 
 
-import academy.learnprogramming.config.GameConfig;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Main
  */
 @Slf4j
+@SpringBootApplication
 public class Main {
 // new Log with lombok
     //    public static final Logger log = LoggerFactory.getLogger(Main.class);
@@ -23,9 +21,6 @@ public class Main {
         log.info("Guess The Number Game");
 
         // create context (container)
-        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(GameConfig.class);
-
-        // close context (container)
-        context.close();
+        SpringApplication.run(Main.class, args);
     }
 }
